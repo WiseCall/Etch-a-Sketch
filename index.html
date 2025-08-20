@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="size-btn">Change Size</button>
+    <button id="eraser-btn">Eraser</button>
+    <dialog id="dialog-box">
+        <button id="closeSize-btn">X</button>
+        <form method="dialog">
+            <label for="size">Enter new size: </label>
+            <input type="number" id="size" name="size" min="1" max="100" placeholder="1">
+            <button type="submit" id="submitSize-btn">Set size</button>
+        </form>
+    </dialog>
     <div class="container"></div>
     <script src="index.js"></script>
 </body>
