@@ -6,12 +6,14 @@ const closeSizeDialog = document.getElementById('closeSize-btn')
 const submitSizeButton = document.getElementById('submitSize-btn')
 const eraserButton = document.getElementById('eraser-btn')
 const size = document.getElementById('size')
+const penColourSelector = document.querySelector('.change-pen-colour')
 let isDrawing = false
 let penColour = 'black'
 
 const init = () => {
     defaultGrid()
-    addHoverEffect()
+    draw()
+    changePenColour()
 }
 
 function defaultGrid() {
@@ -21,7 +23,6 @@ function defaultGrid() {
 }
     container.innerHTML = grids
 }
-//add a hover effect
 
 function clickState() {
     document.addEventListener('mousedown', () => {
@@ -33,9 +34,38 @@ function clickState() {
     return isDrawing
 }
 
+function blackPenColour() {
+    penColour = 'black'
+}
+function redPenColour() {
+    penColour = '#F60000'
+}
 
+function orangePenColour() {
+    penColour = '#FF8C00'
+}
 
-function addHoverEffect() {
+function yellowPenColour() {
+    penColour = '#FFEE00'
+}
+
+function greenPenColour() {
+    penColour = '#4DE94C'
+}
+
+function lightBluePenColour() {
+    penColour = '#3783FF'
+}
+
+function navyPenColour() {
+    penColour = '#4815AA'
+}
+
+function eraser() {
+    penColour = 'white'
+}
+
+function draw() {
     const grids = document.querySelectorAll('.grid')
     // Change grid color only when mouse is pressed
         grids.forEach(grid => {
@@ -46,12 +76,12 @@ function addHoverEffect() {
             grid.addEventListener('mousedown', function(e) {
                 e.preventDefault()
                 isDrawing = true
-                grid.style.backgroundColor = 'black'
+                grid.style.backgroundColor = penColour
             })
             // Colour on hover if mouse is pressed
             grid.addEventListener('mouseover', function() {
                 if (isDrawing) {
-                    grid.style.backgroundColor = 'black'
+                    grid.style.backgroundColor = penColour
                 }
             })
     })
@@ -87,7 +117,7 @@ submitSizeButton.addEventListener('click', function() {
         }
         container.innerHTML = grids
         setCSSgridSize(newSize)
-        addHoverEffect()
+        draw()
     }
 })
 

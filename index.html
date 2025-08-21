@@ -8,7 +8,7 @@
 </head>
 <body>
     <button id="size-btn">Change Size</button>
-    <button id="eraser-btn">Eraser</button>
+    <button id="eraser-btn" onclick="eraser()">Eraser</button>
     <dialog id="dialog-box">
         <button id="closeSize-btn">X</button>
         <form method="dialog">
@@ -17,6 +17,15 @@
             <button type="submit" id="submitSize-btn">Set size</button>
         </form>
     </dialog>
+    <div class="change-pen-colour">
+        <button class="colour-btn" id="black" onclick="blackPenColour()">Black</button>
+        <button class="colour-btn" id="red" onclick="redPenColour()">Red</button>
+        <button class="colour-btn" id="orange" onclick="orangePenColour()">Orange</button>
+        <button class="colour-btn" id="yellow" onclick="yellowPenColour()">Yellow</button>
+        <button class="colour-btn" id="green" onclick="greenPenColour()">Green</button>
+        <button class="colour-btn" id="light-blue" onclick="lightBluePenColour()">Light Blue</button>
+        <button class="colour-btn" id="navy" onclick="navyPenColour()">Navy</button>
+    </div>
     <div class="container"></div>
     <script src="index.js"></script>
 </body>
