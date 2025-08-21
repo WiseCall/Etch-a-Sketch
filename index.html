@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id="size-btn">Change Size</button>
-    <button id="eraser-btn" onclick="eraser()">Eraser</button>
     <dialog id="dialog-box">
         <button id="closeSize-btn">X</button>
         <form method="dialog">
@@ -17,14 +16,18 @@
             <button type="submit" id="submitSize-btn">Set size</button>
         </form>
     </dialog>
-    <div class="change-pen-colour">
-        <button class="colour-btn" id="black" onclick="blackPenColour()">Black</button>
-        <button class="colour-btn" id="red" onclick="redPenColour()">Red</button>
-        <button class="colour-btn" id="orange" onclick="orangePenColour()">Orange</button>
-        <button class="colour-btn" id="yellow" onclick="yellowPenColour()">Yellow</button>
-        <button class="colour-btn" id="green" onclick="greenPenColour()">Green</button>
-        <button class="colour-btn" id="light-blue" onclick="lightBluePenColour()">Light Blue</button>
-        <button class="colour-btn" id="navy" onclick="navyPenColour()">Navy</button>
+    <div class="sidebar">
+        <button id="size-btn">Change Size</button>
+        <button id="eraser-btn" onclick="eraser()">Eraser</button>
+        <div class="change-pen-colour">
+            <button class="colour-btn" id="black" style="background-color: black;" onclick="blackPenColour()"></button>
+            <button class="colour-btn" id="red" style="background-color: #F60000;" onclick="redPenColour()"></button>
+            <button class="colour-btn" id="orange" style="background-color: #FF8C00;" onclick="orangePenColour()"></button>
+            <button class="colour-btn" id="yellow" style="background-color: #FFEE00;" onclick="yellowPenColour()"></button>
+            <button class="colour-btn" id="green" style="background-color: #4DE94C;" onclick="greenPenColour()"></button>
+            <button class="colour-btn" id="light-blue" style="background-color: #3783FF;" onclick="lightBluePenColour()"></button>
+            <button class="colour-btn" id="navy" style="background-color: #4815AA;" onclick="navyPenColour()"></button>
+        </div>
     </div>
     <div class="container"></div>
     <script src="index.js"></script>

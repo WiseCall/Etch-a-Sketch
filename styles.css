@@ -1,5 +1,21 @@
 /* make the grids 16x16 */
 
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar {
+    position: fixed;
+    /* border: 1px solid; */
+    left: 30px;
+    top: 10%;
+    width: 20%;
+    height: 300px;
+}
+
 div.container {
     margin: auto;
     display: flex;
@@ -13,6 +29,16 @@ div.grid {
     flex: 0 0 43.75px;
     width: 43.75px;
     height: 43.75px;
-    border: 1px solid;
+    /* border: 1px solid; */
     box-sizing: border-box;
+}
+
+.colour-btn {
+    margin: 5px;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    white-space: nowrap;
+    font-size: 14px;
+    border:3px solid black;
 }
